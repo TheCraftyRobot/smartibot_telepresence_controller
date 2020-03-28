@@ -74,9 +74,6 @@
 <body>
 
 
-
-<input type="text" class="input-res" id="pubInput" placeholder="Paste PubNub publish key here">
-<input type="text" class="input-res" id="subInput" placeholder="Paste PubNub subscriber key here">
 <div class="btn-groupV">
   <button class="button" onclick="sendDrive('F');" ><img height="50%" src="img/up.svg"/></button>
   </div>
@@ -93,7 +90,7 @@
 <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.23.0.min.js"></script>
 <script>
 function sendDrive(direction){
-  var pubnub = new PubNub({publishKey : pubInput.value, subscribeKey : subInput.value});
+  var pubnub = new PubNub({publishKey : pub-c-ccd96d03-5105-4baa-938b-fc8df80f445e, subscribeKey : sub-c-9f740b18-6ea5-11ea-bbe3-3ec3e5ef3302});
     pubnub.publish({ channel : "drive", message : direction });
     console.log(direction);
   }
